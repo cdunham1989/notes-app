@@ -5,4 +5,11 @@
   }
 
   testCreationOfNewNote();
+
+  function testNoteInstantiation() {
+    var noteModel = new NoteModel();
+    assert.isTrue(noteModel.getText() === "My favourite language is JavaScript");
+  }
+
+  testNoteInstantiation();
 })(this);
