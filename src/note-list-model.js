@@ -1,15 +1,19 @@
 (function(exports) {
-  function NoteList() {
-    this._notes = [];
-  }
 
-  NoteList.prototype.showNotes = function() {
-    return this._notes;
+  exports.NoteList = function() {
+    var _notes = [];
+
+    showNotes = function() {
+      return _notes;
+    };
+
+    addNoteModel = function(text) {
+      _notes.push(new NoteModel(text));
+    };
+
+    return {
+      showNotes: showNotes,
+      addNoteModel: addNoteModel
+    };
   };
-
-  NoteList.prototype.addNoteModel = function(text) {
-    this._notes.push(new NoteModel(text));
-  };
-
-  exports.NoteList = NoteList;
 })(this);
