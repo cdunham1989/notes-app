@@ -1,7 +1,6 @@
 (function(exports) {
 
-  exports.NoteListView = function(noteList = new NoteList) {
-    var noteList = noteList;
+  exports.NoteListView = function(noteList = new NoteList()) {
 
     noteToHTML = function() {
       var arrayOfNotes = noteList.showNotes().map(function(note) {
