@@ -1,6 +1,18 @@
-window.onload = function() {
-  var element = document.getElementById("app");
-  console.log(element);
+(function(exports) {
+  function NoteController( noteList = new NoteList) {
+    this.noteList = noteList;
+    this.noteListView = new NoteListView(noteList);
+    noteList.addNoteModel("Test");
+  }
 
-  document.getElementById("app").innerHTML = "Howdy";
-};
+  NoteController.prototype.insertHTML = function() {
+    var HTMLString = this.noteListView.noteToHTML();
+    var element = document.getElementById("app");
+    element.innerHTML = HTMLString;
+  };
+
+  exports.NoteController = NoteController;
+})(this);
+
+noteController = new NoteController();
+noteController.insertHTML();

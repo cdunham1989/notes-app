@@ -6,7 +6,7 @@
       var arrayOfNotes = noteList.showNotes().map(function(note) {
         return note.getText();
       });
-      return "<ul><li><div>" + arrayOfNotes.join("</div></li><li><div>") + "/div></li></ul>";
+      return "<ul><li><div>" + arrayOfNotes.join("</div></li><li><div>") + "</div></li></ul>";
     };
 
     return {
