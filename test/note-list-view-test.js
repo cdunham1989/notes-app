@@ -14,4 +14,12 @@
   }
 
   testCreateStringOfHTML();
+
+  function testDisplayFirstTwentyCharacters() {
+    var noteListView = new NoteListView();
+    noteListView.noteList.addNoteModel("This is twenty characters");
+    assert.isTrue(noteListView.noteTwentyCharacters() === "<ul><li><div>This is twenty chara</div></li></ul>");
+  }
+
+  testDisplayFirstTwentyCharacters();
 })(this);

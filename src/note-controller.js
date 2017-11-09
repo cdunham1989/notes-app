@@ -1,5 +1,5 @@
 (function(exports) {
-  function NoteController( noteList = new NoteList) {
+  function NoteController(noteList = new NoteList()) {
     this.noteList = noteList;
     this.noteListView = new NoteListView(noteList);
     noteList.addNoteModel("Test");
