@@ -9,7 +9,11 @@
   };
 
   NoteList.prototype.addNoteModel = function(text) {
-    this._notes.push(new NoteModel(text, this.id));
+    this._notes.push(new NoteModel(text));
+  };
+
+  NoteList.prototype.returnNoteTextByIndex = function(index) {
+    return this._notes[index].getText();
   };
 
   exports.NoteList = NoteList;
