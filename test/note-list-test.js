@@ -13,4 +13,14 @@
   }
 
   testNoteStorage();
+
+  function testNoteID() {
+    var noteList = new NoteList();
+    noteList.addNoteModel("test0");
+    noteList.addNoteModel("test1");
+    noteList.addNoteModel("test2");
+    assert.isTrue(noteList.showNotes().pop().getID() === 2);
+  }
+
+  testNoteID();
 })(this);

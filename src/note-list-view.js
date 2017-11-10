@@ -20,6 +20,5 @@
     });
     return "<ul><li><div>" + arrayofStringsTwenty.join("</div></li><li><div>") + "</div></li></ul>";
   };
-
   exports.NoteListView = NoteListView;
 })(this);
