@@ -3,10 +3,11 @@
     this.noteList = noteList;
     this.noteListView = new NoteListView(noteList);
     noteList.addNoteModel("Test");
+    noteList.addNoteModel("Test2");
   }
 
   NoteController.prototype.insertHTML = function() {
-    var HTMLString = this.noteListView.noteToHTML();
+    var HTMLString = this.noteListView.noteViewURL();
     var element = document.getElementById("app");
     element.innerHTML = HTMLString;
   };
