@@ -1,6 +1,6 @@
 (function(exports) {
 
-  exports.NoteModel = function(text, id) {
+  exports.NoteModel = function(text) {
     var _text = text;
 
     getText = function() {

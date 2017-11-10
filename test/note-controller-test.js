@@ -4,7 +4,7 @@
     noteController.insertHTML();
     var element = document.getElementById("app").textContent;
 
-    assert.isTrue(element === "TestTest2");
+    assert.isTrue(element === "TestTest2Testing if 20 charac");
   }
 
   createHTMLForNote();

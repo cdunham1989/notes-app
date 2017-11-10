@@ -4,6 +4,7 @@
     this.noteListView = new NoteListView(noteList);
     noteList.addNoteModel("Test");
     noteList.addNoteModel("Test2");
+    noteList.addNoteModel("Testing if 20 character limit works");
   }
 
   NoteController.prototype.insertHTML = function() {
