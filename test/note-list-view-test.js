@@ -6,24 +6,7 @@
 
   testNoteListViewInstantiation();
 
-  function testCreateStringOfHTML() {
-    var noteListView = new NoteListView();
-    noteListView.noteList.addNoteModel("Word");
-    noteListView.noteList.addNoteModel("More Words");
-    assert.isTrue(noteListView.noteToHTML() === "<ul><li id=0><div>Word</div></li> <li id=1><div>More Words</div></li></ul>");
-  }
-
-  testCreateStringOfHTML();
-
-  function testDisplayFirstTwentyCharacters() {
-    var noteListView = new NoteListView();
-    noteListView.noteList.addNoteModel("This is twenty characters");
-    assert.isTrue(noteListView.noteTwentyCharacters() === "<ul><li id=0><div>This is twenty chara</div></li></ul>");
-  }
-
-  testDisplayFirstTwentyCharacters();
-
-  function testNoteViewURL() {
+function testNoteViewURL() {
     var noteListView = new NoteListView();
     noteListView.noteList.addNoteModel("This is twenty characters");
 

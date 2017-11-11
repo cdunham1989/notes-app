@@ -11,25 +11,6 @@
     return array;
   };
 
-  NoteListView.prototype.noteToHTML = function() {
-    var arrayOfNotes = this.notesToArray();
-    var arrayHTML = arrayOfNotes.map(function(text, index) {
-      return "<li id=" + index + "><div>" + text + "</div></li>";
-    });
-    return "<ul>" + arrayHTML.join(" ") + "</ul>";
-  };
-
-  NoteListView.prototype.noteTwentyCharacters = function() {
-    var arrayOfContents = this.notesToArray();
-    var arrayofStringsTwenty = arrayOfContents.map(function(string) {
-      return string.substring(0, 20);
-    });
-    var arrayHTML = arrayofStringsTwenty.map(function(text, index) {
-      return "<li id=" + index + "><div>" + text + "</div></li>";
-    });
-    return "<ul>" + arrayHTML.join(" ") + "</ul>";
-  };
-
   NoteListView.prototype.noteViewURL = function(string) {
     var arrayOfNotes = this.notesToArray();
     var arrayofStringsTwenty = arrayOfNotes.map(function(string) {
