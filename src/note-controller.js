@@ -17,10 +17,6 @@
   exports.NoteController = NoteController;
 })(this);
 
-noteController = new NoteController();
-noteController.insertHTML();
-MakeUrlChangeShowCurrentNote();
-
 function MakeUrlChangeShowCurrentNote() {
   window.addEventListener("hashchange", showCurrentNote);
 }
@@ -38,3 +34,7 @@ function showNote(note) {
     .getElementById("note")
     .innerHTML = noteController.noteList.returnNoteTextByIndex(note);
 }
+
+noteController = new NoteController();
+noteController.insertHTML();
+MakeUrlChangeShowCurrentNote();
